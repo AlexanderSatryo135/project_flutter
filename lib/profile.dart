@@ -45,7 +45,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final bool isDarkMode = widget.isDarkMode;
     final Color cardColor = isDarkMode
         ? Colors.black.withOpacity(0.9)
-        : const Color.fromARGB(255, 32, 96, 133).withOpacity(0.9);
+        : const Color.fromARGB(255, 24, 43, 95).withOpacity(0.9);
     final Color textColor = isDarkMode ? Colors.white : Colors.black;
     final Color subtitleColor = isDarkMode ? Colors.grey[300]! : Colors.grey;
 
@@ -53,7 +53,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         title: Text('title'.tr(), style: const TextStyle(color: Colors.white)),
         centerTitle: true,
-        backgroundColor: isDarkMode ? Colors.black : const Color(0xFF37769B),
+        backgroundColor: isDarkMode ? Colors.black : const Color.fromARGB(255, 24, 43, 95),
         leading: Padding(
           padding: const EdgeInsets.only(left: 12),
           child: Center(
@@ -68,7 +68,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 dropdownColor: Colors.white.withOpacity(0.95),
                 style: const TextStyle(
                   fontSize: 14,
-                  color: Color(0xFF23506C),
+                  color: Color.fromARGB(255, 255, 255, 255),
                 ),
                 icon: const SizedBox.shrink(),
                 items: const [
@@ -133,9 +133,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 : const AssetImage('assets/dhito.jpg') as ImageProvider,
                           ),
                           IconButton(
-                            icon: const Icon(Icons.edit, color: Colors.white),
+                            icon: const Icon(Icons.edit, color: Color.fromARGB(255, 255, 255, 255)),
                             onPressed: _pickImage,
-                            tooltip: 'Ganti Foto',
+                            tooltip: 'Change Profile Picture',
                           ),
                         ],
                       ),
@@ -171,6 +171,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                           backgroundColor: const Color(0xFF37769B),
+                          foregroundColor: Colors.white
                         ),
                       ),
                       const SizedBox(height: 12),
@@ -181,6 +182,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF37769B),
                           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                          foregroundColor: Colors.white
                         ),
                       ),
                       const SizedBox(height: 24),
